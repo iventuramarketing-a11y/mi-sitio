@@ -1488,9 +1488,7 @@ footer {
         <div class="pay-grid">
           <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Tu Camino al Despertar (8 sesiones)','950')">🔵 PayPal</button>
           <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta de Debito','Tu Camino al Despertar (8 sesiones)','950')">💳 Tarjeta de Debito</button>
-           <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta de Credito','Tu Camino al Despertar (8 sesiones)','950')">💳 Tarjeta de Credito</button>            
-        </div>
-        <div class="pay-row">
+          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta de Credito','Tu Camino al Despertar (8 sesiones)','950')">💳 Tarjeta de Credito</button>            
           <button class="pay-btn pay-btn-apple"    onclick="handlePay('Apple Pay','Tu Camino al Despertar (8 sesiones)','950')"> Apple Pay</button>
       </div>
     </div>
@@ -1539,13 +1537,11 @@ footer {
         </div>
         <div class="pay-grid reveal d4" style="max-width:370px;margin-bottom:7px;">
           <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Meditación Guiada','14.99')">🔵 PayPal</button>
-          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta de Debito','Meditación Guiada','14.99')">💳 Tarjeta de Debito</button>
-        <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta de Credito','Meditación Guiada','14.99')">💳 Tarjeta de Credito</button>       
         </div>
         <div class="pay-row reveal d4" style="max-width:370px;margin-bottom:22px;">
           <button class="pay-btn pay-btn-apple" onclick="handlePay('Apple Pay','Meditación Guiada','14.99')"> Apple Pay</button>
           <button class="pay-btn pay-btn-card"  onclick="handlePay('Débito','Meditación Guiada','14.99')">Débito</button>
-           <button class="pay-btn pay-btn-card"  onclick="handlePay('Credito','Meditación Guiada','14.99')">Credito</button>       
+          <button class="pay-btn pay-btn-card"  onclick="handlePay('Credito','Meditación Guiada','14.99')">Credito</button>       
         </div>
         <a href="#booking" class="btn btn-pink reveal d5">Reservar clase</a>
       </div>
@@ -1678,9 +1674,14 @@ footer {
             <label class="pay-m">
               <input type="radio" name="bk-pay" value="card" />
               <span class="pay-m-icon">💳</span>
-              <span class="pay-m-label">Tarjeta crédito/débito</span>
+              <span class="pay-m-label">Tarjeta Debito</span>
             </label>
-            <label class="pay-m">
+              <label class="pay-m">
+              <input type="radio" name="bk-pay" value="card" />
+              <span class="pay-m-icon">💳</span>
+              <span class="pay-m-label">Tarjeta Credito</span>
+            </label>        
+             <label class="pay-m">
               <input type="radio" name="bk-pay" value="apple" />
               <span class="pay-m-icon"></span>
               <span class="pay-m-label">Apple Pay</span>
