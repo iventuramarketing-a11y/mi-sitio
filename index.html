@@ -197,7 +197,26 @@ button { cursor: pointer; font-family: var(--font-body); border: none; }
 }
 .btn-pink:hover { box-shadow: 0 8px 30px rgba(233,140,163,0.5); transform: translateY(-2px); }
 
-.btn-full { width: 100%; }
+.btn-full { width: 100%; justify-content: center; }
+
+/* Stripe / Calendly single-button overrides */
+.svc-card .btn-gold {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 14px 20px;
+  font-size: 12px;
+  border-radius: 0;
+}
+.svc-card .btn-outline-gold {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 11px 20px;
+  font-size: 11px;
+  border-radius: 0;
+  opacity: 0.85;
+}
 
 /* Payment buttons */
 .pay-btn {
@@ -1438,15 +1457,10 @@ footer {
         </p>
         <div class="svc-price"><sup>$</sup>150</div>
         <p class="svc-note">Por sesión · Online o presencial</p>
-        <div class="pay-grid">
-          <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Sanación Espiritual 1:1','150')">🔵 PayPal</button>
-          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta','Sanación Espiritual 1:1','150')">💳 Tarjeta</button>
-        </div>
-        <div class="pay-row">
-          <button class="pay-btn pay-btn-apple"    onclick="handlePay('Apple Pay','Sanación Espiritual 1:1','150')"> Apple Pay</button>
-          <button class="pay-btn pay-btn-afterpay" onclick="handlePay('Afterpay','Sanación Espiritual 1:1','150')">Afterpay</button>
-        </div>
-        <p class="installment-note">💛 PayPal Pay Later disponible al hacer checkout</p>
+        <!-- Stripe payment -->
+        <a href="https://buy.stripe.com/5kQ28r0v6brBg7t2VbgnK00" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-full" style="margin-bottom:10px;">Reservar y pagar ✦</a>
+        <!-- Calendly scheduling (after payment) -->
+        <a href="https://calendly.com/despertarespiritualcentroholistico/sanacion-espiritual-1-1" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-full" style="font-size:11px;">📅 Agendar después del pago</a>
       </div>
 
       <!-- Servicio 2 -->
@@ -1459,15 +1473,10 @@ footer {
         </p>
         <div class="svc-price"><sup>$</sup>150</div>
         <p class="svc-note">Por sesión · Online o presencial</p>
-        <div class="pay-grid">
-          <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Alineación de Chakras','150')">🔵 PayPal</button>
-          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta','Alineación de Chakras','150')">💳 Tarjeta</button>
-        </div>
-        <div class="pay-row">
-          <button class="pay-btn pay-btn-apple"    onclick="handlePay('Apple Pay','Alineación de Chakras','150')"> Apple Pay</button>
-          <button class="pay-btn pay-btn-afterpay" onclick="handlePay('Afterpay','Alineación de Chakras','150')">Afterpay</button>
-        </div>
-        <p class="installment-note">💛 PayPal Pay Later disponible al hacer checkout</p>
+        <!-- Stripe payment -->
+        <a href="https://buy.stripe.com/bJe3cv2DeeDN8F13ZfgnK01" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-full" style="margin-bottom:10px;">Reservar y pagar ✦</a>
+        <!-- Calendly scheduling (after payment) -->
+        <a href="https://calendly.com/despertarespiritualcentroholistico/alineacion-de-chakras" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-full" style="font-size:11px;">📅 Agendar después del pago</a>
       </div>
 
       <!-- Servicio 3 — Paquete -->
@@ -1487,15 +1496,10 @@ footer {
         </ul>
         <div class="svc-price"><sup>$</sup>950</div>
         <p class="svc-note">Paquete 8 sesiones · USD</p>
-        <div class="pay-grid">
-          <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Tu Camino al Despertar (8 sesiones)','950')">🔵 PayPal</button>
-          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta','Tu Camino al Despertar (8 sesiones)','950')">💳 Tarjeta</button>
-        </div>
-        <div class="pay-row">
-          <button class="pay-btn pay-btn-apple"    onclick="handlePay('Apple Pay','Tu Camino al Despertar (8 sesiones)','950')"> Apple Pay</button>
-          <button class="pay-btn pay-btn-afterpay" onclick="handlePay('Afterpay','Tu Camino al Despertar (8 sesiones)','950')">Afterpay</button>
-        </div>
-        <p class="installment-note" style="color:rgba(255,255,255,0.3);border-top-color:rgba(255,255,255,0.07);">💛 Afterpay: divide en 4 pagos sin intereses</p>
+        <!-- Stripe payment -->
+        <a href="https://buy.stripe.com/28E3cv0v667hdZl7brgnK02" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-full" style="margin-bottom:10px;">Comenzar proceso ✨</a>
+        <!-- Calendly scheduling (after payment) -->
+        <a href="https://calendly.com/despertarespiritualcentroholistico/tu-camino-al-despertar" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-full" style="font-size:11px;color:rgba(255,255,255,0.55);border-color:rgba(255,255,255,0.2);">📅 Agendar después del pago</a>
       </div>
     </div>
   </div>
@@ -1541,15 +1545,10 @@ footer {
             <div class="med-detail-value">Online & Presencial</div>
           </div>
         </div>
-        <div class="pay-grid reveal d4" style="max-width:370px;margin-bottom:7px;">
-          <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Meditación Guiada','14.99')">🔵 PayPal</button>
-          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta','Meditación Guiada','14.99')">💳 Tarjeta</button>
-        </div>
-        <div class="pay-row reveal d4" style="max-width:370px;margin-bottom:22px;">
-          <button class="pay-btn pay-btn-apple" onclick="handlePay('Apple Pay','Meditación Guiada','14.99')"> Apple Pay</button>
-          <button class="pay-btn pay-btn-card"  onclick="handlePay('Débito','Meditación Guiada','14.99')">Débito</button>
-        </div>
-        <a href="#booking" class="btn btn-pink reveal d5">Reservar clase</a>
+        <!-- Stripe payment -->
+        <a href="https://buy.stripe.com/00w28rcdO53d3kHbrHgnK03" target="_blank" rel="noopener noreferrer" class="btn btn-gold reveal d4" style="margin-bottom:10px;max-width:370px;width:100%;">Reservar clase ✨</a>
+        <!-- Calendly scheduling (after payment) -->
+        <a href="https://calendly.com/despertarespiritualcentroholistico/clase-de-meditacion-guiada" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold reveal d4" style="font-size:11px;max-width:370px;width:100%;margin-bottom:22px;">📅 Agendar después del pago</a>
       </div>
     </div>
   </div>
@@ -1633,9 +1632,6 @@ footer {
         <!-- 3. Time -->
         <div class="time-grid-wrap">
           <span class="field-label" id="time-lbl">3. Horario (Dom–Vie, 9 AM – 6 PM)</span>
-          <div class="gap-note">
-            ℹ️ Cada sesión dura 1 hora con 30 min de descanso. Si reservas a las 9:00 AM, el siguiente disponible es a las 10:30 AM.
-          </div>
           <div class="time-grid" id="time-grid"></div>
         </div>
 
@@ -1668,33 +1664,6 @@ footer {
           </select>
         </div>
 
-        <!-- 5. Payment -->
-        <div style="margin-bottom:18px;">
-          <span class="field-label">5. Método de pago</span>
-          <div class="pay-methods-grid">
-            <label class="pay-m">
-              <input type="radio" name="bk-pay" value="paypal" checked />
-              <span class="pay-m-icon">🔵</span>
-              <span class="pay-m-label">PayPal / Pay Later</span>
-            </label>
-            <label class="pay-m">
-              <input type="radio" name="bk-pay" value="card" />
-              <span class="pay-m-icon">💳</span>
-              <span class="pay-m-label">Tarjeta crédito/débito</span>
-            </label>
-            <label class="pay-m">
-              <input type="radio" name="bk-pay" value="apple" />
-              <span class="pay-m-icon"></span>
-              <span class="pay-m-label">Apple Pay</span>
-            </label>
-            <label class="pay-m">
-              <input type="radio" name="bk-pay" value="afterpay" />
-              <span class="pay-m-icon">🟢</span>
-              <span class="pay-m-label">Afterpay (4 pagos)</span>
-            </label>
-          </div>
-        </div>
-
         <!-- Summary -->
         <div class="booking-summary">
           <div class="sum-title">Resumen de reserva</div>
@@ -1704,9 +1673,8 @@ footer {
           <div class="sum-row"><span>Total</span><span id="sum-total">$150.00</span></div>
         </div>
 
-        <a href="https://buy.stripe.com/test_cNi6oIf8h4sd4mndRg3cc03" target="_blank">
-  <button class="confirm-btn">Confirmar mi reserva ✦</button>
-</a>
+        <button class="confirm-btn" id="confirm-btn">Confirmar mi reserva ✦</button>
+      </div>
 
       <!-- INFO CARDS -->
       <div class="booking-info">
@@ -1728,20 +1696,6 @@ footer {
 
         <div class="secure-badges reveal d3">
           <p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-light);margin-bottom:11px;font-weight:500;">Pagos seguros vía</p>
-          <div class="secure-row">
-            <span class="s-badge pp">PayPal</span>
-            <span class="s-badge ap"> Pay</span>
-            <span class="s-badge">Visa</span>
-            <span class="s-badge">Mastercard</span>
-            <span class="s-badge aft">Afterpay</span>
-          </div>
-        </div>
-
-        <div class="installment-info reveal d4">
-          <strong>💛 Opciones de pago a plazos:</strong>
-          <br>• PayPal Pay Later — financia tu sesión
-          <br>• Afterpay — divide en 4 pagos sin intereses
-          <br><span style="font-size:11px;color:var(--text-light);">Aplican términos del proveedor.</span>
         </div>
 
         <div class="bi-card reveal">
@@ -1749,7 +1703,7 @@ footer {
           <h4>¿Preguntas? Escríbenos</h4>
           <p>
             📞 <a href="tel:+17073383007">+1 (707) 338-3007</a><br>
-            ✉️ <a href="mailto:centroholistico.espiritual11@gmail.com" style="font-size:12px;">centroholistico.espiritual11@gmail.com</a>
+            ✉️ <a href="/cdn-cgi/l/email-protection#a6c5c3c8d2d4c9cec9cacfd5d2cfc5c988c3d5d6cfd4cfd2d3c7ca9797e6c1cbc7cfca88c5c9cb" style="font-size:12px;"><span class="__cf_email__" data-cfemail="d5b6b0bba1a7babdbab9bca6a1bcb6bafbb0a6a5bca7bca1a0b4b9e4e495b2b8b4bcb9fbb6bab8">[email&#160;protected]</span></a>
           </p>
         </div>
       </div>
@@ -1806,7 +1760,7 @@ footer {
         <h5>Contacto</h5>
         <ul class="foot-links">
           <li><a href="tel:+17073383007">📞 +1 (707) 338-3007</a></li>
-          <li><a href="mailto:centroholistico.espiritual11@gmail.com">✉️ centroholistico.espiritual11<br>@gmail.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#c9aaaca7bdbba6a1a6a5a0babda0aaa6e7acbab9a0bba0bdbca8a5f8f889aea4a8a0a5e7aaa6a4">✉️ centroholistico.espiritual11<br>@gmail.com</a></li>
           <li><a>🕐 Dom–Vie: 9 AM – 6 PM</a></li>
           <li><a>🧘 Sáb: Meditación 12–1 PM</a></li>
         </ul>
@@ -1877,7 +1831,7 @@ footer {
 <!-- ===========================
      JAVASCRIPT
 =========================== -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ---- NAV SCROLL ---- */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 60));
@@ -1932,7 +1886,7 @@ function showToast(msg) {
    BOOKING SYSTEM
    Rules:
    - Sessions (individual): Sunday–Friday, 9AM–6PM
-     Duration: 1hr + 30min gap → slots every 1.5hr
+     Duration: 1hr 
      Slots: 9:00 10:30 12:00 13:30 15:00 16:30
    - Meditation: Saturday ONLY, 12PM–1PM
 ============================================================ */
@@ -2080,7 +2034,6 @@ document.getElementById('confirm-btn').addEventListener('click', () => {
   const name  = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
   const mode  = document.getElementById('f-mode').value;
-  const pay   = document.querySelector('input[name="bk-pay"]:checked').value;
   const svc   = document.querySelector('input[name="bk-svc"]:checked');
 
   if (!name)  { alert('Por favor ingresa tu nombre.'); return; }
@@ -2097,24 +2050,9 @@ document.getElementById('confirm-btn').addEventListener('click', () => {
     if (!bookedSlots[dk].includes(timeMap[selTime])) bookedSlots[dk].push(timeMap[selTime]);
   }
 
-  const payLabels = { paypal:'PayPal', card:'Tarjeta crédito/débito', apple:'Apple Pay', afterpay:'Afterpay' };
-  showToast(`¡${name}, tu reserva para "${svc.dataset.label}" el ${selDate.getDate()}/${selDate.getMonth()+1} a las ${selTime} está confirmada! Método: ${payLabels[pay]}. Recibirás un correo de confirmación.`);
+  showToast(`¡${name}, tu reserva para "${svc.dataset.label}" el ${selDate.getDate()}/${selDate.getMonth()+1} a las ${selTime} está confirmada! Recibirás un correo de confirmación.`);
 
   // Reset
   selDate = null; selTime = null;
   renderCal(); renderSlots(); updateSteps(1);
-  document.getElementById('f-name').value = '';
-  document.getElementById('f-last').value = '';
-  document.getElementById('f-email').value = '';
-  document.getElementById('f-phone').value = '';
-  document.getElementById('f-mode').value = '';
-  updateSummary();
-});
-
-/* --- INIT --- */
-renderCal();
-renderSlots();
-updateSummary();
-</script>
-</body>
-</html>
+  document.ge
