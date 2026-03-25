@@ -1438,9 +1438,16 @@ footer {
         </p>
         <div class="svc-price"><sup>$</sup>150</div>
         <p class="svc-note">Por sesión · Online o presencial</p>
-        <a href="https://buy.stripe.com/5kQ28r0v6brBg7t2VbgnK00"_blank">
-  <button class="confirm-btn">Pagar ahora ✨</button>
-</a>
+        <div class="pay-grid">
+          <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Sanación Espiritual 1:1','150')">🔵 PayPal</button>
+          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta','Sanación Espiritual 1:1','150')">💳 Tarjeta</button>
+        </div>
+        <div class="pay-row">
+          <button class="pay-btn pay-btn-apple"    onclick="handlePay('Apple Pay','Sanación Espiritual 1:1','150')"> Apple Pay</button>
+          <button class="pay-btn pay-btn-afterpay" onclick="handlePay('Afterpay','Sanación Espiritual 1:1','150')">Afterpay</button>
+        </div>
+        <p class="installment-note">💛 PayPal Pay Later disponible al hacer checkout</p>
+      </div>
 
       <!-- Servicio 2 -->
       <div class="svc-card reveal d1">
@@ -1453,10 +1460,16 @@ footer {
         <div class="svc-price"><sup>$</sup>150</div>
         <p class="svc-note">Por sesión · Online o presencial</p>
         <div class="pay-grid">
-        <a href="https://buy.stripe.com/bJe3cv2DeeDN8F13ZfgnK01" target="_blank">
-  <button class="confirm-btn">Pagar ahora ✨</button>
-           <a 
-  
+          <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Alineación de Chakras','150')">🔵 PayPal</button>
+          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta','Alineación de Chakras','150')">💳 Tarjeta</button>
+        </div>
+        <div class="pay-row">
+          <button class="pay-btn pay-btn-apple"    onclick="handlePay('Apple Pay','Alineación de Chakras','150')"> Apple Pay</button>
+          <button class="pay-btn pay-btn-afterpay" onclick="handlePay('Afterpay','Alineación de Chakras','150')">Afterpay</button>
+        </div>
+        <p class="installment-note">💛 PayPal Pay Later disponible al hacer checkout</p>
+      </div>
+
       <!-- Servicio 3 — Paquete -->
       <div class="svc-card featured reveal d2">
         <span class="svc-badge badge-feat">✦ Más transformador</span>
@@ -1474,9 +1487,20 @@ footer {
         </ul>
         <div class="svc-price"><sup>$</sup>950</div>
         <p class="svc-note">Paquete 8 sesiones · USD</p>
-        <a href="https://buy.stripe.com/28E3cv0v667hdZl7brgnK02" target="_blank">
-  <button class="confirm-btn">Comenzar proceso ✨</button>
-</a>    
+        <div class="pay-grid">
+          <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Tu Camino al Despertar (8 sesiones)','950')">🔵 PayPal</button>
+          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta','Tu Camino al Despertar (8 sesiones)','950')">💳 Tarjeta</button>
+        </div>
+        <div class="pay-row">
+          <button class="pay-btn pay-btn-apple"    onclick="handlePay('Apple Pay','Tu Camino al Despertar (8 sesiones)','950')"> Apple Pay</button>
+          <button class="pay-btn pay-btn-afterpay" onclick="handlePay('Afterpay','Tu Camino al Despertar (8 sesiones)','950')">Afterpay</button>
+        </div>
+        <p class="installment-note" style="color:rgba(255,255,255,0.3);border-top-color:rgba(255,255,255,0.07);">💛 Afterpay: divide en 4 pagos sin intereses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===========================
      MEDITATION CLASS
 =========================== -->
@@ -1517,10 +1541,19 @@ footer {
             <div class="med-detail-value">Online & Presencial</div>
           </div>
         </div>
-" target="_blank">
-<a href="https://buy.stripe.com/00w28rcdO53d3kHbrHgnK03" target="_blank">
-  <button class="confirm-btn">Reservar clase ✨</button>
-</a>  
+        <div class="pay-grid reveal d4" style="max-width:370px;margin-bottom:7px;">
+          <button class="pay-btn pay-btn-paypal" onclick="handlePay('PayPal','Meditación Guiada','14.99')">🔵 PayPal</button>
+          <button class="pay-btn pay-btn-card"   onclick="handlePay('Tarjeta','Meditación Guiada','14.99')">💳 Tarjeta</button>
+        </div>
+        <div class="pay-row reveal d4" style="max-width:370px;margin-bottom:22px;">
+          <button class="pay-btn pay-btn-apple" onclick="handlePay('Apple Pay','Meditación Guiada','14.99')"> Apple Pay</button>
+          <button class="pay-btn pay-btn-card"  onclick="handlePay('Débito','Meditación Guiada','14.99')">Débito</button>
+        </div>
+        <a href="#booking" class="btn btn-pink reveal d5">Reservar clase</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===========================
      BOOKING SYSTEM
@@ -1634,8 +1667,35 @@ footer {
             <option value="presencial">Presencial</option>
           </select>
         </div>
-     
-         <!-- Summary -->
+
+        <!-- 5. Payment -->
+        <div style="margin-bottom:18px;">
+          <span class="field-label">5. Método de pago</span>
+          <div class="pay-methods-grid">
+            <label class="pay-m">
+              <input type="radio" name="bk-pay" value="paypal" checked />
+              <span class="pay-m-icon">🔵</span>
+              <span class="pay-m-label">PayPal / Pay Later</span>
+            </label>
+            <label class="pay-m">
+              <input type="radio" name="bk-pay" value="card" />
+              <span class="pay-m-icon">💳</span>
+              <span class="pay-m-label">Tarjeta crédito/débito</span>
+            </label>
+            <label class="pay-m">
+              <input type="radio" name="bk-pay" value="apple" />
+              <span class="pay-m-icon"></span>
+              <span class="pay-m-label">Apple Pay</span>
+            </label>
+            <label class="pay-m">
+              <input type="radio" name="bk-pay" value="afterpay" />
+              <span class="pay-m-icon">🟢</span>
+              <span class="pay-m-label">Afterpay (4 pagos)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Summary -->
         <div class="booking-summary">
           <div class="sum-title">Resumen de reserva</div>
           <div class="sum-row"><span>Servicio</span><span id="sum-svc">Sanación Espiritual 1:1</span></div>
@@ -1658,7 +1718,7 @@ footer {
         <div class="bi-card reveal d1">
           <span class="bi-card-icon">📅</span>
           <h4>Horarios flexibles</h4>
-          <p>Sesiones disponibles de domingo a viernes, 9 AM a 6 PM. Cada sesión tiene 1 hora de duración. Los sábados son exclusivos para la clase de meditación guiada la cual puede ser presencial o via zoom (12 PM).</p>
+          <p>Sesiones disponibles de domingo a viernes, 9 AM a 6 PM. Cada sesión tiene 1 hora de duración + 30 min de descanso. Los sábados son exclusivos para la clase de meditación guiada (12 PM).</p>
         </div>
         <div class="bi-card reveal d2">
           <span class="bi-card-icon">🌐</span>
@@ -1673,11 +1733,14 @@ footer {
             <span class="s-badge ap"> Pay</span>
             <span class="s-badge">Visa</span>
             <span class="s-badge">Mastercard</span>
+            <span class="s-badge aft">Afterpay</span>
           </div>
         </div>
 
         <div class="installment-info reveal d4">
           <strong>💛 Opciones de pago a plazos:</strong>
+          <br>• PayPal Pay Later — financia tu sesión
+          <br>• Afterpay — divide en 4 pagos sin intereses
           <br><span style="font-size:11px;color:var(--text-light);">Aplican términos del proveedor.</span>
         </div>
 
